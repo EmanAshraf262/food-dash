@@ -293,11 +293,6 @@ top: -40px;
 
 
 
-
-
-
-
-
 /* 
  FOOD DASH RESPONSIVE */
  
@@ -577,7 +572,7 @@ top: -40px;
  
     /* Product cards */ 
     .row-cards { 
-        margin-top: calc(45px + 0.217 * (100vw - 24px));   /* CHANGED: pehle 165px tha, ab See All aur circle ke beech har screen par lagbhag 45px ka gap */ 
+        margin-top: calc(45px + 0.217 * (100vw - 24px));   /* pehle 165px tha, ab See All aur circle ke beech har screen par lagbhag 45px ka gap */ 
     } 
  
     .row-cards > .col-4 { 
@@ -663,7 +658,7 @@ top: -40px;
         max-width: 100% !important; 
     } 
  
-    /* CHANGED (NEW): Menu aur Information ke left, beech aur right ka space ab teeno jagah barabar */ 
+    /* Menu aur Information ke left, beech aur right ka space teeno jagah barabar */ 
     .footer-section .row { 
         justify-content: space-evenly; 
     } 
@@ -836,7 +831,7 @@ top: -40px;
  
     /* Product cards */ 
     .row-cards { 
-        margin-top: calc(45px + 0.2295 * (100vw - 24px));   /* CHANGED: chhote phones par bhi See All aur circle ke beech lagbhag 45px ka gap */ 
+        margin-top: calc(45px + 0.2295 * (100vw - 24px));   /* chhote phones par bhi See All aur circle ke beech lagbhag 45px ka gap */ 
     } 
  
     .row-cards > .col-4 { 
@@ -985,10 +980,26 @@ top: -40px;
     }
 }
 
-/* CHANGED (NEW): sirf tablet (576px se 991px) par "Click me" button thora bara, mobile par pehle jaisa hi rehta hai */
+/* sirf tablet (576px se 991px) par "Click me" button thora bara, mobile par pehle jaisa hi rehta hai */
 @media (min-width: 576px) and (max-width: 991.98px) {
     .navbar .navbar-toggler {
         font-size: 1.05rem;
         padding: 0.3rem 0.95rem;
+    }
+}
+
+
+/* ---------- CHANGED (NEW): NAVBAR MENU - tablet + mobile (991px tak) ---------- */
+@media (max-width: 991.98px) {
+
+    /* Menu khulne par search aur avatar upar ki row mein hi rahein, neeche na jayein (pehle ye sirf 575px tak tha) */
+    .navbar .navbar-collapse {
+        order: 3;
+    }
+
+    /* Home, Menu, Offers... ab left ki jagah button ke neeche, beech mein khulte hain */
+    .navbar .navbar-collapse .navbar-nav {
+        align-items: center;
+        text-align: center;
     }
 }
