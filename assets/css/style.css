@@ -300,9 +300,6 @@ top: -40px;
 
 
 
-
-
-
 /* 
  FOOD DASH RESPONSIVE */
  
@@ -911,4 +908,55 @@ top: -40px;
     .h-heading { 
         font-size: 22px; 
     } 
+}
+
+
+/* ---------- CHANGED (NEW): NAVBAR - sirf phone (575px tak) ---------- */
+/* Logo, "Click me" button, search aur avatar ab har phone par ek hi row mein aate hain */
+
+@media (max-width: 575.98px) {
+
+    /* Logo: screen ke hisab se chhota hota hai (80px se 140px tak) */
+    .navbar .navbar-brand {
+        margin-right: 0;
+    }
+
+    .navbar .logo {
+        width: clamp(80px, 26vw, 140px);
+        height: auto;
+    }
+
+    /* "Click me" button thora chhota */
+    .navbar .navbar-toggler {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.6rem;
+        flex-shrink: 0;
+    }
+
+    /* Search circle + avatar chhote, aur apni jagah par barabar */
+    .navbar .search {
+        width: clamp(34px, 10.5vw, 45px);
+        height: clamp(34px, 10.5vw, 45px);
+        flex-shrink: 0;
+    }
+
+    .navbar .search i {
+        font-size: clamp(14px, 4.4vw, 20px);
+    }
+
+    .navbar .img-icon {
+        width: clamp(34px, 10.5vw, 45px);
+        height: clamp(34px, 10.5vw, 45px);
+        flex-shrink: 0;
+    }
+
+    /* Menu khulne par wo neeche aata hai, icons upar ki row mein hi rehte hain */
+    .navbar .navbar-collapse {
+        order: 3;
+    }
+}
+
+/* OPTIONAL: agar "Click me" button bhi apni dost jaisa orange pill chahiye to ye 2 line ka comment hata dein */
+@media (max-width: 575.98px) {
+    .navbar .navbar-toggler { border: 1px solid #FF6000; color: #FF6000; border-radius: 50px; background: transparent; }
 }
